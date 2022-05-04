@@ -8,6 +8,7 @@ sys.setrecursionlimit(5000)
 
 loop = 0
 
+# This is considered the world's hardest sudoku board-
 board = [
     [8, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 3, 6, 0, 0, 0, 0, 0],
