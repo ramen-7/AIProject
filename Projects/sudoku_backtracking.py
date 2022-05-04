@@ -8,9 +8,8 @@ sys.setrecursionlimit(5000)
 
 loop = 0
 
-# This is considered the world's hardest sudoku board-
 board = [
-    [8, 0, 0, 0, 0, 0, 0, 0, 0],
+    [8, 0, 0, 0, 0, 0, 0, 0, 8],
     [0, 0, 3, 6, 0, 0, 0, 0, 0],
     [0, 7, 0, 0, 9, 0, 2, 0, 0],
     [0, 5, 0, 0, 0, 7, 0, 0, 0],
@@ -83,9 +82,15 @@ def recursive_solver(board):
 
             board[next_y][next_x] = 0
 
+    return False
+
 
 solution = recursive_solver(board)
 # solution = solver(board)
 
 os.system("cls")
-print_rows(solution)
+
+if solution:
+    print_rows(solution)
+else:
+    print("No solution/Board Invalid")
