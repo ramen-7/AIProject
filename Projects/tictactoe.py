@@ -254,14 +254,42 @@ class board:
 
 
 if __name__ == "__main__":
+
+    os.system("cls")
     playBoard = board(3)
-    # playBoard.state = [["X", "O", "X"], ["X", "O", "X"], [" ", " ", " "]]
-    # playBoard.hvh(playBoard.p1)
-    # bestmove = playBoard.findBestMove()
-    # print(bestmove)
-    # print(playBoard.findBestMove())
-    cointoss = random.randint(0, 1)
-    if cointoss:
-        playBoard.hvai(playBoard.p2)
+
+    choice1 = input("1. Human vs Human \n2. Human vs AI\n")
+
+    if choice1 is "1":
+        os.system("cls")
+        choice_human = input("1. Start Random \n2. Start X \n3. Start O\n")
+
+        if choice_human is "1":
+            cointoss = random.randint(0, 1)
+            if cointoss:
+                playBoard.hvh(playBoard.p2)
+            else:
+                playBoard.hvh(playBoard.p1)
+
+        elif choice_human is "2":
+            playBoard.hvh(playBoard.p1)
+
+        else:
+            playBoard.hvh(playBoard.p2)
+
     else:
-        playBoard.hvai(playBoard.p1)
+        os.system("cls")
+        choice_ai = input("1. Start Random \n2. Start Human \n3. Start AI\n")
+
+        if choice_ai is "1":
+            cointoss = random.randint(0, 1)
+            if cointoss:
+                playBoard.hvai(playBoard.p2)
+            else:
+                playBoard.hvai(playBoard.p1)
+
+        elif choice_ai is "2":
+            playBoard.hvai(playBoard.p1)
+
+        else:
+            playBoard.hvai(playBoard.p2)
