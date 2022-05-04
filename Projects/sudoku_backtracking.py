@@ -5,11 +5,11 @@ import os
 
 sys.setrecursionlimit(5000)
 
-
 loop = 0
 
+# This is considered the world's hardest sudoku board-
 board = [
-    [8, 0, 0, 0, 0, 0, 0, 0, 8],
+    [8, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 3, 6, 0, 0, 0, 0, 0],
     [0, 7, 0, 0, 9, 0, 2, 0, 0],
     [0, 5, 0, 0, 0, 7, 0, 0, 0],
